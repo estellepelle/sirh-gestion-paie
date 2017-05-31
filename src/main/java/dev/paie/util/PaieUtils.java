@@ -7,6 +7,9 @@ import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.Locale;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PaieUtils {
 	
 	/**
