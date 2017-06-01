@@ -1,9 +1,11 @@
 package dev.paie.entite;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Cotisation {
@@ -14,6 +16,12 @@ public class Cotisation {
 	private String libelle;
 	private BigDecimal tauxSalarial;
 	private BigDecimal tauxPatronal;
+	
+	@ManyToMany(mappedBy="cotisationsImposables")
+	private List<ProfilRemuneration> imposable;
+	
+	@ManyToMany(mappedBy="cotisationsNonImposables")
+	private List<ProfilRemuneration> nomImp;
 	
 	public Cotisation() {
 	

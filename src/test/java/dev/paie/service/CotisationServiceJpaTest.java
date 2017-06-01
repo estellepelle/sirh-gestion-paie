@@ -40,7 +40,7 @@ public class CotisationServiceJpaTest {
 	// TODO vérifier qu'il est possible de récupérer la nouvelle cotisation via laméthode lister
 	    List<Cotisation> listCotis =  cotisService.lister();
 		
-		assertTrue(listCotis.stream().anyMatch(g -> g.getId().equals(id)));
+	  		assertTrue(listCotis.stream().anyMatch(g -> g.getId().equals(id)));
 	    
 	// TODO modifier une cotisation
 		Cotisation cotisModifier = listCotis.get(0);
