@@ -58,6 +58,8 @@
 	
 	 <!-- GRADE --> 
 	 <bean id="G01" class="dev.paie.entite.Grade">
+	 	<property name="id" value="1"></property>
+	 	<property name="code" value="sergent"></property>
 		<property name="nbHeuresBase" value="151.67"></property>
 		<property name="tauxBase" value="11.0984"></property>			
 	</bean>
