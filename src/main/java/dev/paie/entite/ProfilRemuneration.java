@@ -17,9 +17,13 @@ public class ProfilRemuneration {
 	
 	
 	@ManyToMany
+	@JoinTable(name="cotisation_non_impo",joinColumns= @JoinColumn(name="id_non_imp", referencedColumnName="id"),
+    inverseJoinColumns= @JoinColumn(name="id_cotis", referencedColumnName="id"))
 	private List<Cotisation> cotisationsNonImposables;
 	
 	@ManyToMany
+	@JoinTable(name="cotisation_impo",joinColumns= @JoinColumn(name="id_imp", referencedColumnName="id"),
+    inverseJoinColumns= @JoinColumn(name="id_cotis", referencedColumnName="id"))
 	private List<Cotisation> cotisationsImposables;
 	
 	@ManyToMany
