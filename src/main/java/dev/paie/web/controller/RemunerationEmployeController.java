@@ -4,6 +4,7 @@ import java.time.ZonedDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,6 +39,7 @@ public class RemunerationEmployeController {
 	private RemunerationEmployeRepository employeRepository;
 	
 	@RequestMapping(method = RequestMethod.GET, path = "/creer")
+	@Secured("ROLE_ADMINISTRATEUR")
 	public ModelAndView creerEmploye() {
 		ModelAndView mv = new ModelAndView();
 		
@@ -54,6 +56,7 @@ public class RemunerationEmployeController {
 	
 
 	@RequestMapping(method=RequestMethod.POST, value="/creer")
+	@Secured({"ROLE_UTILISATEUR", "ROLE_ADMINISTRATEUR"})
 	 public String form(@RequestParam("matricule") String matricule, 
 			 				  @RequestParam("grade") Integer gradeId, 
 			 				  @RequestParam("profil") Integer profilId,
