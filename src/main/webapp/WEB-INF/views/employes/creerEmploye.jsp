@@ -11,9 +11,15 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/bootstrap-3.3.7-dist/css/bootstrap.css">
 </head>
 <body>
+	
+	<header>
+		<a href="#">Employes</a>
+		<a href="#">Bulletins</a>
+	</header>
+	
 	<h1>Ajouter un employé</h1>
 	
-	<form class="form-horizontal">
+	<form class="form-horizontal"  method="post">
 <fieldset>
 
 
@@ -21,7 +27,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Matricule">Matricule</label>  
   <div class="col-md-4">
-  <input id="Matricule" name="Matricule" type="text" placeholder="" class="form-control input-md">
+  <input id="Matricule" name="matricule" type="text" placeholder="" class="form-control input-md">
     
   </div>
 </div>
@@ -30,9 +36,9 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Entreprise">Entreprise</label>
   <div class="col-md-4">
-    <select id="Entreprise" name="Entreprise" class="form-control">
+    <select id="Entreprise" name="entreprise" class="form-control">
     <c:forEach var="entreprise" items="${entreprise}"> 
-    	 <option value="">${entreprise.denomination}</option>
+    	 <option value="${entreprise.id}">${entreprise.denomination}</option>
     </c:forEach>
     </select>
   </div>
@@ -44,9 +50,9 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Profil">Profil</label>
   <div class="col-md-4">
-    <select id="Profil" name="Profil" class="form-control">
+    <select id="Profil" name="profil" class="form-control">
     <c:forEach var="profil" items="${profil}"> 
-    	 <option value="">${profil.code}</option>
+    	 <option value="${profil.id}">${profil.code}</option>
     </c:forEach>
     </select>
   </div>
@@ -56,8 +62,10 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Grade">Grade</label>
   <div class="col-md-4">
-    <select id="Grade" name="Grade" class="form-control">
-    <option value=""></option>
+    <select id="Grade" name="grade" class="form-control">
+    <c:forEach var="grade" items="${grade}"> 
+    	 <option value="${grade.id}">${grade.code}</option>
+    </c:forEach>
     </select>
   </div>
 </div>
