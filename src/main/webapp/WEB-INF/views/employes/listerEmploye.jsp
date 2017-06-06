@@ -13,11 +13,11 @@
 <body>
 	
 	<header>
-		<a href="#">Employes</a>
+		<a href="lister">Employes</a>
 		<a href="#">Bulletins</a>
 	</header>
 	
-	<h1>Liste des employés</h1>
+	<h1 style="text-align:center">Liste des employés</h1>
 	
 	<table class="table table-striped">
 		<thead>

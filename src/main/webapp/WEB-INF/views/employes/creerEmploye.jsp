@@ -13,11 +13,11 @@
 <body>
 	
 	<header>
-		<a href="#">Employes</a>
+		<a href="lister">Employes</a>
 		<a href="#">Bulletins</a>
 	</header>
 	
-	<h1>Ajouter un employé</h1>
+	<h1 style="text-align:center">Ajouter un employé</h1>
 	
 	<form class="form-horizontal"  method="post">
 <fieldset>
