@@ -13,7 +13,7 @@
 <body>
 	
 	<header>
-		<a href="lister">Employes</a>
+		<a href="creer">Employes</a>
 		<a href="#">Bulletins</a>
 	</header>
 	

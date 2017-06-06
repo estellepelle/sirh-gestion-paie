@@ -18,7 +18,7 @@ import dev.paie.spring.JpaConfig;
 @Configuration
 @EnableWebMvc
 @ComponentScan("dev.paie.web.controller")
-@Import({DataSourceMySQLConfig.class,JpaConfig.class, ServicesConfig.class})
+@Import({DataSourceMySQLConfig.class,JpaConfig.class, ServicesConfig.class, SecurityConfig.class})
 
 public class WebAppConfig {
 	
